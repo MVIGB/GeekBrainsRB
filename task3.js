@@ -53,7 +53,6 @@ break;
 }
 
 var outputString = vowels + " " + consonants + " " + digits
-//console.log(outputString)
 process.stdout.write(outputString);
 }
 }
