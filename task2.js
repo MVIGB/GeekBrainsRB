@@ -33,7 +33,6 @@ process.exit(1);
 }
 }
 
-
 inputNumber = parseInt(inputNumber);
 
 if (inputNumber >= -10000 & inputNumber <= 10000)
