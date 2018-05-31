@@ -1,44 +1,13 @@
 # Task 2
 
-if ARGV.length != 1
-abort "Input string is incorrect."
-end
-
-inputString = ARGV[0]
-
-for i in 0..inputString.length - 1
-
-case inputString[i]
-
-when '0'..'9'
-next
-
-when '-'
-next
-
-else
-abort "Input string is incorrect."
-
-end #case
-
-end #for
-
-inputNumber = inputString.to_i;
-
-if inputNumber < -10000 || inputNumber > 10000
-abort "Input string is incorrect."
-end
+if ARGV[0].to_i >= -10000 || ARGV[0].to_i <= 10000
 
 sign = 1
-even = inputNumber % 2
-
-
-if inputNumber < 0 && even == 0
+if ARGV[0].to_i < 0 && ARGV[0].to_i.abs % 2 == 0
 sign = -1
 end
 
-
-for i in 0..inputNumber.abs
+for i in 0..ARGV[0].to_i.abs
 
 case i
 
@@ -61,6 +30,5 @@ end #case
 
 end #for
 
-fibo *= sign
-
-puts fibo
+puts fibo * sign
+end
