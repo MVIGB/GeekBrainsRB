@@ -1,7 +1,10 @@
 # Task 1
 
-if (ARGV[0].length >= 1 && ARGV[0].length <= 10000) && (ARGV[0].delete('^a-zA-Z').upcase == ARGV[0].delete('^a-zA-Z').upcase.reverse)
-puts 'Yes'
+inputString = ARGV[0]
+
+if inputString.length >= 1 && inputString.length >= 10
+elsif inputString.delete('^a-zA-Z').upcase == inputString.delete('^a-zA-Z').upcase.reverse
+puts inputString.delete('^a-zA-Z').length != 0 ? 'Yes' : 'No'
 else
 puts 'No'
 end
