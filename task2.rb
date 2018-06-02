@@ -1,13 +1,12 @@
 # Task 2
 
-if ARGV[0].to_i >= -10000 || ARGV[0].to_i <= 10000
+inputNumber = ARGV[0].to_i
 
-sign = 1
-if ARGV[0].to_i < 0 && ARGV[0].to_i.abs % 2 == 0
-sign = -1
-end
+if inputNumber >= -10000 && inputNumber <= 10000
 
-for i in 0..ARGV[0].to_i.abs
+sign = inputNumber < 0 && (inputNumber.abs % 2).zero? ? -1 : 1
+
+for i in 0..inputNumber.abs
 
 case i
 
