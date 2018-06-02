@@ -8,9 +8,9 @@ vowels = inputString.delete('^AEIOUaeiou')
 consonants = inputString.delete('AEIOUaeiou0-9 ').delete('^a-zA-Z')
 digits = inputString.delete('^0-9')
 
-code = inputString.delete('^AEIOUaeiou').length == 0 ? '0' : '1'
-code += inputString.delete('AEIOUaeiou0-9 ').delete('^a-zA-Z').length == 0 ? '0' : '1'
-code += inputString.delete('^0-9').length == 0 ? '0' : '1'
+code = vowels.length == 0 ? '0' : '1'
+code += consonants.length == 0 ? '0' : '1'
+code += digits.length == 0 ? '0' : '1'
 
 case code
 
