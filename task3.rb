@@ -15,31 +15,32 @@ code += digits.length == 0 ? '0' : '1'
 case code
 
 when '111'
-puts vowels + ' ' + consonants + ' ' + digits
+outputString = vowels + ' ' + consonants + ' ' + digits
 
 when '110'
-puts vowels + ' ' + consonants
+outputString = vowels + ' ' + consonants
 
 when '101'
-puts vowels + ' ' + digits
+outputString = vowels + ' ' + digits
 
 when '100'
-puts vowels
+outputString = vowels
 
 when '011'
-puts consonants + ' ' + digits
+outputString = consonants + ' ' + digits
 
 when '010'
-puts consonants
+outputString = consonants
 
 when '001'
-puts digits
+outputString = digits
 
 when '000'
-puts ''
+outputString = ''
 
 else
 pust 'Something is wrong!'
 end
 
+print outputString
 end

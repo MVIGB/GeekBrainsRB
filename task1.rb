@@ -2,9 +2,9 @@
 
 inputString = ARGV[0]
 
-if inputString.length >= 1 && inputString.length >= 10
+if inputString.length >= 1 && inputString.length >= 10000
 elsif inputString.delete('^a-zA-Z').upcase == inputString.delete('^a-zA-Z').upcase.reverse
-puts inputString.delete('^a-zA-Z').length != 0 ? 'Yes' : 'No'
+print "YES"
 else
-puts 'No'
+print "NO"
 end

@@ -4,8 +4,6 @@ inputNumber = ARGV[0].to_i
 
 if inputNumber >= -10000 && inputNumber <= 10000
 
-sign = inputNumber < 0 && (inputNumber.abs % 2).zero? ? -1 : 1
-
 for i in 0..inputNumber.abs
 
 case i
@@ -25,9 +23,14 @@ fibo = fibo_prev_1 + fibo_prev_2
 fibo_prev_1 = fibo_prev_2
 fibo_prev_2 = fibo
 
-end #case
+end
 
-end #for
+end
 
-puts fibo * sign
+if inputNumber < 0 && (inputNumber.abs % 2).zero?
+fibo *= -1
+end
+
+print fibo
+
 end
