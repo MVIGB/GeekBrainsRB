@@ -1,26 +1,23 @@
 # Task 2
 
+fibo_prev_1 = 1
+
 inputNumber = ARGV[0].to_i
 
 if inputNumber >= -10000 && inputNumber <= 10000
 
-for i in 0..inputNumber.abs
-
-case i
+case inputNumber.abs
 
 when 0
-fibo = 0
-fibo_prev_1 = 0
+fibo = 0;
 
 when 1
 fibo = 1
-fibo_prev_2 = 1
 
 else
-fibo = fibo_prev_1 + fibo_prev_2
-fibo_prev_1 = fibo_prev_2
-fibo_prev_2 = fibo
-
+for i in 1..inputNumber.abs
+fibo = fibo_prev_1 + fibo.to_i
+fibo_prev_1 = fibo - fibo_prev_1
 end
 
 end

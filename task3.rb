@@ -7,6 +7,6 @@ outputString = inputString.delete('^AEIOUaeiou') + ' ' +
                inputString.delete('AEIOUaeiou0-9 ').delete('^a-zA-Z') + ' ' +
                inputString.delete('^0-9')
 
-print outputString
+print outputString.strip.sub("  "," ")
 
 end
