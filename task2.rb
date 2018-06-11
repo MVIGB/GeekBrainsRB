@@ -4,7 +4,8 @@ inputNumber = ARGV[0].to_i
 
 if inputNumber >= -10000 && inputNumber <= 10000
 
-fibo = 0; fibo_prev = 1
+fibo = 0
+fibo_prev = 1
 
 for i in 1..inputNumber.abs
 
