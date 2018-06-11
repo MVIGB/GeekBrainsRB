@@ -13,7 +13,7 @@ fibo_prev = fibo - fibo_prev
 
 end
 
-fibo *= -1 if inputNumber < 0 && (inputNumber % 2).zero?
+fibo *= -1 if inputNumber < 0 && inputNumber % 2 != 1
 
 print fibo
 
