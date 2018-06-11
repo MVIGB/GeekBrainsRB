@@ -6,9 +6,9 @@ if inputNumber >= -10000 && inputNumber <= 10000
 
 fibo = 0; fibo_prev = 1
 
-inputNumber.abs.times do |i|
+for i in 1..inputNumber.abs
 
-fibo = fibo_prev + fibo
+fibo += fibo_prev
 fibo_prev = fibo - fibo_prev
 
 end
