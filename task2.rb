@@ -4,17 +4,11 @@ inputNumber = ARGV[0].to_i
 
 if inputNumber >= -10000 && inputNumber <= 10000
 
-fibo = 0
-fibo_prev = 1
+fibo, fibo_prev = 0, 1
 
-for i in 1..inputNumber.abs
+inputNumber.abs.times {fibo_prev, fibo = fibo_prev + fibo, fibo_prev}
 
-fibo += fibo_prev
-fibo_prev = fibo - fibo_prev
-
-end
-
-fibo *= -1 if inputNumber < 0 && inputNumber % 2 != 1
+fibo *= -1 if inputNumber < 0 && (inputNumber.abs % 2).zero?
 
 print fibo
 
