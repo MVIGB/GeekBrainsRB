@@ -1,12 +1,14 @@
 # Task 2
 
-if ARGV.length != 0 && ARGV[0].to_i >= -10000 && ARGV[0].to_i <= 10000
+inputNumber = Integer(ARGV[0])
+
+if inputNumber >= -10000 && inputNumber <= 10000
 
 fibo, fibo_prev = 0, 1
 
-ARGV[0].to_i.abs.times {fibo_prev, fibo = fibo_prev + fibo, fibo_prev}
+1.upto(inputNumber.abs) {fibo_prev, fibo = fibo_prev + fibo, fibo_prev}
 
-fibo *= -1 if ARGV[0].to_i < 0 && (ARGV[0].to_i % 2).zero?
+fibo *= -1 if inputNumber < 0 && inputNumber.even?
 
 print fibo
 
