@@ -4,12 +4,8 @@ inputNumber = Integer(ARGV[0])
 
 if inputNumber >= -10000 && inputNumber <= 10000
 
-fibo, fibo_prev = 0, 1
+Fibonacci = (1..inputNumber.abs - 1).inject([0, 1]){|fibo| fibo << fibo.last(2).inject(:+)}
 
-1.upto(inputNumber.abs) {fibo_prev, fibo = fibo_prev + fibo, fibo_prev}
-
-fibo *= -1 if inputNumber < 0 && inputNumber.even?
-
-print fibo
+print (inputNumber.zero? ? 0 : (inputNumber < 0 && inputNumber.even? ? -Fibonacci[-1] : Fibonacci[-1]))
 
 end
